@@ -16,8 +16,26 @@
     </init-param>
     </servlet>
 
+    <servlet>
+        <servlet-name>HttpServlet</servlet-name>
+        <servlet-class>httpServlet.HTTPServletDemo</servlet-class>
+        <init-param>
+            <param-name>n2</param-name>
+            <param-value>p2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>n1</param-name>
+            <param-value>p1</param-value>
+        </init-param>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>oneServlet</servlet-name>
         <url-pattern>/CServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpServlet</servlet-name>
+        <url-pattern>/HttpServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

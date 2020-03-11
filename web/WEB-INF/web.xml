@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>oneServlet</servlet-name>
+        <servlet-name>DServlet</servlet-name>
         <servlet-class>genericServlet.DServlet</servlet-class>
         <init-param>
             <param-name>n2</param-name>
             <param-value>p2</param-value>
         </init-param>
         <init-param>
-        <param-name>n1</param-name>
-        <param-value>p1</param-value>
-    </init-param>
+            <param-name>n1</param-name>
+            <param-value>p1</param-value>
+        </init-param>
     </servlet>
 
     <servlet>
@@ -28,14 +28,36 @@
             <param-value>p1</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>AServlet</servlet-name>
+        <servlet-class>httpServlet.AServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CServlet</servlet-name>
+        <servlet-class>httpServlet.CServlet</servlet-class>
+    </servlet>
+
 
     <servlet-mapping>
-        <servlet-name>oneServlet</servlet-name>
+        <servlet-name>AServlet</servlet-name>
+        <url-pattern>/AServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CServlet</servlet-name>
         <url-pattern>/CServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DServlet</servlet-name>
+        <url-pattern>/DServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HttpServlet</servlet-name>
         <url-pattern>/HttpServlet</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <param-name>context-param</param-name>
+        <param-value>context-value</param-value>
+    </context-param>
 
 </web-app>

@@ -5,9 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/MyFristJavaWebProject/HttpServlet" method="post">
-    <input type="text" name="text">
+<a href="/MyFristJavaWebProject/RequestServlet?xxx=XXX&yyy=YYY">get请求</a>
+<form action="/MyFristJavaWebProject/RequestServlet" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    爱好:<input type="checkbox" name="hobby" value="吃饭">吃饭
+    <input type="checkbox" name="hobby" value="睡觉">睡觉
+    <input type="checkbox" name="hobby" value="打代码">打代码
+    <br/>
     <input type="submit" value="提交">
+
 </form>
 </body>
 </html>

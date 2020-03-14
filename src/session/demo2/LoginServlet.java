@@ -2,10 +2,7 @@ package session.demo2;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
@@ -26,6 +23,12 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("username",username);
             session.setAttribute("password",password);
             response.sendRedirect("/MyFristJavaWebProject/session/demo2/success1.jsp");
+            Cookie cookie1 = new Cookie("username",username);
+            Cookie cookie2 = new Cookie("password",password);
+            cookie1.setMaxAge(60*60);
+            cookie2.setMaxAge(60*60);
+            response.addCookie(cookie1);
+            response.addCookie(cookie2);
         } else {
             request.setAttribute("error", "用户名密码错误");
             request.getRequestDispatcher("/session/demo2/login.jsp").forward(request, response);

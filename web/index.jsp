@@ -20,7 +20,7 @@
   </head>
   <body>
   <!--是相对于<base>中的链接-->
-  <a href="login.html">跳转到login.html</a>
+  <a href="login.html">跳转到login.html</a><br/>
   <%
     int a = 10;
   %>
@@ -28,5 +28,9 @@
     out.print(a);
   %>
   <%=a%>
+
+  <%
+      application.setAttribute("xxx","XXX");
+  %>
   </body>
 </html>

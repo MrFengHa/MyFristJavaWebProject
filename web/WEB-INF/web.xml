@@ -11,6 +11,10 @@
         <servlet-name>BaseServletDemo2</servlet-name>
         <servlet-class>baseServlet.BaseServletDemo2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Demo1Servlet</servlet-name>
+        <servlet-class>baseServlet.Demo1Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BaseServletDemo</servlet-name>
         <url-pattern>/baseServlet/BaseServletDemo</url-pattern>
@@ -18,5 +22,10 @@
     <servlet-mapping>
         <servlet-name>BaseServletDemo2</servlet-name>
         <url-pattern>/baseServlet/BaseServletDemo2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Demo1Servlet</servlet-name>
+        <url-pattern>/Demo1Servlet</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -12,11 +12,11 @@ import javax.servlet.ServletContextListener;
 public class Demo1 implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        System.out.println("初始化");
+        System.out.println("ServletContextListener初始化");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
-        System.out.println("销毁");
+        System.out.println("ServletContextListener销毁");
     }
 }

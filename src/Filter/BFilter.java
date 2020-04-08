@@ -10,7 +10,7 @@ import java.io.IOException;
  * @Author 冯根源
  * @create 2020/4/8 11:33
  */
-@WebFilter(filterName = "BFilter",urlPatterns = "/*")
+//@WebFilter(filterName = "BFilter",urlPatterns = "/*")
 public class BFilter implements Filter {
     public void destroy() {
     }

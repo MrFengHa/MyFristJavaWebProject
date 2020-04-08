@@ -5,6 +5,7 @@
          version="4.0">
 
     <!--拦截器-->
+    <!--
     <filter>
         <filter-name>AFilter</filter-name>
         <filter-class>Filter.AFilter</filter-class>
@@ -18,6 +19,15 @@
         <dispatcher>ERROR</dispatcher>
     </filter-mapping>
 
+
+    <listener>
+        <listener-class>listener.Demo1</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.Demo2</listener-class>
+    </listener>
+-->
+    <!--监听器-->
     <servlet>
         <servlet-name>BaseServletDemo</servlet-name>
         <servlet-class>baseServlet.BaseServletDemo</servlet-class>
@@ -44,13 +54,7 @@
         <url-pattern>/Demo1Servlet</url-pattern>
     </servlet-mapping>
 
-    <!--监听器-->
-    <listener>
-        <listener-class>listener.Demo1</listener-class>
-    </listener>
-    <listener>
-        <listener-class>listener.Demo2</listener-class>
-    </listener>
+
 
 
 </web-app>

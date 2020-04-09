@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  *文件描述
@@ -23,9 +24,12 @@ import java.io.IOException;
  */
 @WebServlet(name = "UpLoadServlet", urlPatterns = "/UpLoadServlet")
 public class UpLoadServlet extends HttpServlet {
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");//请求访问编码
-        response.setContentType("text/html;charset=utf-8");//响应编码
+        //请求访问编码
+        request.setCharacterEncoding("UTF-8");
+        //响应编码
+        response.setContentType("text/html;charset=utf-8");
         ServletInputStream in = request.getInputStream();
         String s = IOUtils.toString(in,"utf-8");
         System.out.println(s);

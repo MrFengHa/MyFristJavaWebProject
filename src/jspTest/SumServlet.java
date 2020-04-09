@@ -16,6 +16,7 @@ import java.io.IOException;
  */
 @WebServlet(name = "SumServlet", urlPatterns = "/SumServlet")
 public class SumServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获取表单参数
         int num1 = Integer.parseInt(request.getParameter("num1"));
@@ -28,6 +29,7 @@ public class SumServlet extends HttpServlet {
         request.getRequestDispatcher("/jsp1/result.jsp").forward(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

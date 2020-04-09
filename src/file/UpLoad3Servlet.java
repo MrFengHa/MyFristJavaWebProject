@@ -41,6 +41,10 @@ public class UpLoad3Servlet extends HttpServlet {
         DiskFileItemFactory factory = new DiskFileItemFactory();
         //解析器
         ServletFileUpload servletFileUpload = new ServletFileUpload(factory);
+        //限制单个文件的大小100kb 必须在解析之前限制
+        servletFileUpload.setFileSizeMax(100*1024);
+        //设置整个请求的限制
+        servletFileUpload.setSizeMax(1024*1024);
         //得到List
         try {
             List<FileItem> fileItems = servletFileUpload.parseRequest(request);

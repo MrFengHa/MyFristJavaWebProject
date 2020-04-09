@@ -23,7 +23,7 @@ public class MailDemo {
     //发件人账户名
     public static String senderAccount = "1109179567@qq.com";
     //发件人账户密码
-    public static String senderPassword = "135103feng\\=-";
+    public static String senderPassword = "135103fenggen";
 
     public static void main(String[] args) throws Exception {
         //1、连接邮件服务器的参数配置
@@ -33,7 +33,7 @@ public class MailDemo {
         //设置传输协议
         props.setProperty("mail.transport.protocol", "smtp");
         //设置发件人的SMTP服务器地址
-        props.setProperty("mail.smtp.host", "smtp.126.com");
+        props.setProperty("mail.smtp.host", "smtp.qq.com");
         //2、创建定义整个应用程序所需的环境信息的 Session 对象
         Session session = Session.getInstance(props);
         //设置调试信息在控制台打印出来

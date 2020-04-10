@@ -17,7 +17,7 @@ import java.util.Properties;
  */
 public class MailDemo {
     //发件人地址
-    public static String senderAddress = "1109179567@qq.com";
+    public static String senderAddress = "1109179567 @qq.com";
     //收件人地址
     public static String recipientAddress = "671084604@qq.com";
     //发件人账户名
@@ -26,7 +26,7 @@ public class MailDemo {
     public static String senderPassword = "135103fenggen";
 
     public static void main(String[] args) throws Exception {
-        //1、连接邮件服务器的参数配置
+        //1、连接邮件服务器的参数配置---
         Properties props = new Properties();
         //设置用户的认证方式
         props.setProperty("mail.smtp.auth", "true");

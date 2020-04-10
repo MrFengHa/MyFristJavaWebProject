@@ -39,7 +39,7 @@
          * 指定请求的url
          * 是都指定为异步请求
          */
-        xmlHttp.open("POST","<c:url value='/AjaxDemoServlet'/> ",true);
+        xmlHttp.open("POST","${pageContext.request.contextPath}/AjaxDemoServlet ",true);
         //设置请求头
         xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
         /**
